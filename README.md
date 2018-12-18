@@ -9,6 +9,12 @@ This project is to help anyone to start a Kubernetes cluster with ease to use as
 3. RKE - https://github.com/rancher/rke/releases/tag/v0.1.11
 4. kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
+## Vagrant plugin
+
+```
+vagrant plugin install vagrant-hostmanager
+```
+
 ## Important files
 
 1. Vagrantfile - this file is the definition of virtual machine sizes and parameters;
