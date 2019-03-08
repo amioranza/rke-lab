@@ -20,4 +20,4 @@ vagrant plugin install vagrant-hostmanager
 1. Vagrantfile - this file is the definition of virtual machine sizes and parameters;
 2. rancher-cluster.yml - this is the RKE cluster definition, any new machine listed on Vagrantfile need to be added to this file to be used as a new node on Kubernetes;
 3. automate.sh - this is the file that makes the magic happen, basically is a shell script taht calls vagrant up, rke up and kubectl apply;
-4. app-deploy.yml - this file deploys a nginx web server on the new cluster and set an ingress just to demonstration.
+4. app-deploy.yml - this file deploys a nginx web server on the new cluster and set an ingress just for demonstration.
