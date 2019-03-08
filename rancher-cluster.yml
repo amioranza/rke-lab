@@ -25,4 +25,4 @@ network:
   options:
     canal_iface: "enp0s9"
 system_images:
-  kubernetes: rancher/hyperkube:v1.11.5-rancher1
+  kubernetes: rancher/hyperkube:v1.13.4-rancher1

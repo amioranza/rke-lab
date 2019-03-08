@@ -5,6 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 cluster = {
+  "rancher" => { :ip1 => "192.168.157.9", :ip2 => "192.168.197.9", :cpus => 1, :mem => 2048, :script => "deploy_rancher.sh"},
   "kube-master" => { :ip1 => "192.168.157.10", :ip2 => "192.168.197.10", :cpus => 1, :mem => 2048, :script => "deploy.sh"},
   "kube-worker1" => { :ip1 => "192.168.157.11", :ip2 => "192.168.197.11", :cpus => 1, :mem => 2048, :script => "deploy.sh" },
   "kube-worker2" => { :ip1 => "192.168.157.12", :ip2 => "192.168.197.12", :cpus => 1, :mem => 2048, :script => "deploy.sh"}
@@ -18,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
     config.vm.define hostname do |cfg|
       cfg.vm.provider :virtualbox do |vb, override|
-        config.vm.box = "ubuntu/xenial64"
+        config.vm.box = "ubuntu/bionic64"
         config.vm.synced_folder ".", "/vagrant"
         override.vm.network :private_network, ip: "#{info[:ip1]}"
         override.vm.network :private_network, ip: "#{info[:ip2]}"
