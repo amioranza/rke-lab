@@ -3,7 +3,7 @@
 # checking pre-reqs
 echo "#### Checking RKE ####"
 if [ ! -e /usr/local/bin/rke ]; then
-  curl -LO https://github.com/rancher/rke/releases/download/v0.1.17/rke_linux-amd64
+  curl -LO https://github.com/rancher/rke/releases/download/v0.2.0/rke_linux-amd64
   chmod +x rke_linux-amd64
   mv rke_linux-amd64 rke
   sudo mv rke /usr/local/bin/rke
